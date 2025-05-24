@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsBlitz",
+  "version": "0.0.1",
+  "description": "Automate Personalized WhatsApp Messages",
+  
+  "permissions": [
+    "scripting",
+    "tabs",
+    "storage",
+    "activeTab"
+  ],
+  
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "css": ["sidebar.css"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "xlsx.full.min.js",
+        "sidebar.js",
+        "sidebar.css"
+      ],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ]
+}
