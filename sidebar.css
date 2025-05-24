@@ -1,0 +1,60 @@
+#whatsblitz-sidebar {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 320px;
+  background: #ffffff;
+  border: 2px solid #25D366;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+#whatsblitz-sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #25D366;
+  font-size: 18px;
+}
+
+#whatsblitz-sidebar input,
+#whatsblitz-sidebar button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+#whatsblitz-sidebar input {
+  border: 1px solid #ddd;
+}
+
+#whatsblitz-sidebar button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#whatsblitz-sidebar button:hover {
+  background-color: #128C7E;
+}
+
+#wb-status {
+  margin: 15px 0;
+  font-size: 14px;
+  min-height: 20px;
+  line-height: 1.4;
+}
+
+#wb-progress {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+  font-weight: bold;
+}
