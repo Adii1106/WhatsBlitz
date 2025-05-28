@@ -58,3 +58,99 @@
   color: #555;
   font-weight: bold;
 }
+.wb-container {
+  padding: 15px;
+}
+
+.wb-title {
+  color: #25D366;
+  margin: 0 0 15px 0;
+}
+
+.wb-input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.wb-button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wb-status {
+  margin: 15px 0;
+  min-height: 20px;
+  font-size: 14px;
+}
+
+.wb-progress {
+  color: #666;
+  font-size: 13px;
+}
+
+.wb-input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px dashed #25D366;
+  border-radius: 6px;
+  background: #f8f8f8;
+  cursor: pointer;
+  text-align: center;
+  color: #666;
+}
+
+.wb-input[type="file"]:hover {
+  background: #f0f0f0;
+  border-color: #128C7E;
+}
+
+.wb-input[type="file"]::file-selector-button {
+  background: #25D366;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.wb-input[type="file"]::file-selector-button:hover {
+  background: #128C7E;
+}
+
+.wb-loading {
+  display: none;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.wb-loading.active {
+  display: block;
+}
+
+.wb-loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #25D366;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
