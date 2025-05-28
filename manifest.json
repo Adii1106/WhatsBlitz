@@ -1,14 +1,13 @@
 {
   "manifest_version": 3,
   "name": "WhatsBlitz",
-  "version": "0.0.1",
-  "description": "Automate Personalized WhatsApp Messages",
+  "version": "1.0",
+  "description": "Bulk WhatsApp message sender",
   
   "permissions": [
+    "activeTab",
     "scripting",
-    "tabs",
-    "storage",
-    "activeTab"
+    "storage"
   ],
   
   "host_permissions": [
@@ -17,16 +16,22 @@
   
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon.png"
-    }
+    "default_icon": "icon.png"
+  },
+
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "background": {
+    "service_worker": "background.js"
   },
   
   "content_scripts": [
     {
       "matches": ["https://web.whatsapp.com/*"],
-      "js": ["content.js"],
       "css": ["sidebar.css"],
+      "js": ["content.js"],
       "run_at": "document_end"
     }
   ],
@@ -36,9 +41,15 @@
       "resources": [
         "xlsx.full.min.js",
         "sidebar.js",
-        "sidebar.css"
+        "sidebar.css",
+        "icon.png"
       ],
       "matches": ["https://web.whatsapp.com/*"]
     }
-  ]
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self'"
+  }
 }
